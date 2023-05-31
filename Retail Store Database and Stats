@@ -1,0 +1,30 @@
+
+-- Create a retail store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, section TEXT, price INTEGER, aisle INTEGER);
+
+INSERT INTO store VALUES (1, "pillows", 14, "home", 10.99, 3);
+INSERT INTO store VALUES (2, "excedrin", 17, "pharmacy", 5.49, 21);
+INSERT INTO store VALUES (3, "silverware", 37, "kitchen", 2.99, 12);
+INSERT INTO store VALUES (4, "avocados", 17, "produce", 0.49, 9);
+INSERT INTO store VALUES (5, "helmets", 11, "outdoors", 19.99, 33);
+INSERT INTO store VALUES (6, "blankets", 56, "home", 24.99, 3);
+INSERT INTO store VALUES (7, "shirts", 101, "clothing", 7.49, 44);
+INSERT INTO store VALUES (8, "pants", 156, "clothing", 29.99, 44);
+INSERT INTO store VALUES (9, "cups", 32, "kitchen", 3.49, 12);
+INSERT INTO store VALUES (10, "scooters", 9, "outdoors", 79, 34);
+INSERT INTO store VALUES (11, "lettuce", 26, "produce", 3.49, 9);
+INSERT INTO store VALUES (12, "rulers", 21, "supplies", 0.99, 1);
+INSERT INTO store VALUES (13, "spatulas", 13, "kitchen", 4, 12);
+INSERT INTO store VALUES (14, "erasers", 29, "supplies", 0.49, 1);
+INSERT INTO store VALUES (15, "knifes", 19, "kitchen", 22.89, 12);
+
+--display the database ordered by price
+SELECT item, quantity, price FROM store ORDER BY price desc;
+
+--items in aisles greater than or equal to 21
+SELECT * FROM store WHERE aisle >=21 ORDER BY aisle;
+
+
+--4 items with the most quantity 
+SELECT item, quantity, price FROM store ORDER BY quantity desc LIMIT 4 
