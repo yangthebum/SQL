@@ -5,16 +5,29 @@
 CREATE TABLE marvel_movies (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, released INTEGER, minutes INTEGER, director TEXT, rotten_tomatoes INTEGER);
 
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Captain America: Civil War", 2016, 147, "Russo Brothers", 91);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Spider-Man: No Way Home", 2021, 148, "Jon Watts", 93);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Guardians of the Galaxy Vol. 2", 2017, 137, "James Gunn", 85);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Eternals", 2021, 157, "Chloe Zhao", 47);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Ant-Man", 2015, 125, "Peyton Reed", 85);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Black Panther: Wakanda Forever", 2022, 161, "Ryan Coogler", 84);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Avengers: Infinity War", 2018, 149, "Russo Brothers", 85); 
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Shang Chi & the Legend of the Ten Rings", 2021, 122, "Destin Cretton", 91);
+
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Ant-Man & The Wasp: Quantumania", 2023, 125, "Peyton Reed", 46);
+
+
+
 SELECT director, SUM(minutes) AS total_minutes FROM marvel_movies WHERE director = "Russo Brothers";
+
 SELECT director, AVG(minutes) AS avg_minutes FROM marvel_movies WHERE director = "Russo Brothers";
+
 
 SELECT COUNT(*),
 
@@ -26,6 +39,7 @@ CASE
 END AS "freshness" FROM marvel_movies
 
 GROUP BY "freshness";
+
 
 SELECT title, rotten_tomatoes, director FROM marvel_movies WHERE rotten_tomatoes >= 91 OR director = "James Gunn";
 
