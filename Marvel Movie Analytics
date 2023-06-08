@@ -1,3 +1,6 @@
+
+--Data Dig Marvel movies:
+
 CREATE TABLE marvel_movies (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, released INTEGER, minutes INTEGER, director TEXT, rotten_tomatoes INTEGER);
 
 INSERT INTO marvel_movies (title, released, minutes, director, rotten_tomatoes) VALUES ("Captain America: Civil War", 2016, 147, "Russo Brothers", 91);
