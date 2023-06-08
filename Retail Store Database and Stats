@@ -25,6 +25,5 @@ SELECT item, quantity, price FROM store ORDER BY price desc;
 --items in aisles greater than or equal to 21
 SELECT * FROM store WHERE aisle >=21 ORDER BY aisle;
 
-
 --4 items with the most quantity 
 SELECT item, quantity, price FROM store ORDER BY quantity desc LIMIT 4 
