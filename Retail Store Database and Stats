@@ -26,4 +26,4 @@ SELECT item, quantity, price FROM store ORDER BY price desc;
 SELECT * FROM store WHERE aisle >=21 ORDER BY aisle;
 
 --4 items with the most quantity 
-SELECT item, quantity, price FROM store ORDER BY quantity desc LIMIT 4 
+SELECT item, quantity, price FROM store ORDER BY quantity desc LIMIT 4;
